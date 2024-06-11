@@ -39,14 +39,25 @@ Here are some screenshots of the output
 ![screenshot1.jpg](screenshot1.jpg)
 Screenshot showing convo summerisation.
 
+
+
+
 ![Screenshot2.jpg](Screenshot2.jpg)
 Screenshot showing that AI doesnt know the info from the pdf alone.
+
+
+
 
 ![screenshot3.jpg](screenshot3.jpg)
 It now answers the question based on pdf + text input.
 
+
+
+
 ![screenshot4.png](screenshot4.png)
 Answers questions based on pdf content alone.
+
+
 
 ## How this works
 Once running, the app takes either the text input or the pdf or both to generate text. The text is then divided into

@@ -7,7 +7,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import ChatOpenAI
 
 
-OPENAI_API_KEY = "sk-proj-OIykabzihn2SJr1eBB1nT3BlbkFJZQsXWXMyvMXOepLJxmPF"
+OPENAI_API_KEY = "your_OpenAI_API_key"
 
 
 def extract_text_from_pdf(file):
