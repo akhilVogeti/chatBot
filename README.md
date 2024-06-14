@@ -16,11 +16,11 @@ A python application that uses ChatGPT and langchain to respond to your question
 ## How to run
 1. clone the repo.
 ````
-git clone https://github.com/akhilVogeti/PDFInsights.git
+git clone https://github.com/akhilVogeti/chatBot.git 
 ````
 2. Move to the root directory
 ````
-cd PDFInsights
+cd chatBot
 ````
 3. Install the dependencies 
 ````
