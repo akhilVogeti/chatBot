@@ -3,7 +3,7 @@
 A python application that uses ChatGPT and langchain to respond to your questions/prompts on an uploaded pdf or text input or both.
 
 ## Requirements
-1. OpenAI API Key (paid)
+1. OpenAI API Key (paid). Make sure to add your own API key in the code before running it. 
 2. Required Packages:  
 
     - streamlit: A Python library for creating interactive web applications.
