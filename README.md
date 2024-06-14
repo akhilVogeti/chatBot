@@ -69,7 +69,7 @@ Answers questions based on pdf content alone.
     * Computes embeddings for each text chunk (capturing meaning). <br>
 
 3. Role of FAISS <br>
-    * FAISS (Facebook AI Similarity Search) library is used forfor similatiry search. The text chunks most similar to the user's question are found using similarity             search. They are called matches in the code. <br>
+    * FAISS (Facebook AI Similarity Search) library is used for similarity search. The text chunks most similar to the user's question are found using similarity             search. They are called matches in the code. <br>
     * FAISS.from_texts is used to create a FAISS index (vector_store) from these text chunks and their corresponding embeddings. <br>
       
 4. Question Answering with GPT-3.5-turbo <br>
