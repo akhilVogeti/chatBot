@@ -60,16 +60,20 @@ Answers questions based on pdf content alone.
 
 
 ## How this works
-Once running, the app takes either the text input or the pdf or both to generate text. The text is then divided into
-chunks. Embeddings are then computed for those chunks and stored in a vector store. Here it is FAISS. 
+1. Text Processing <br>
+    * Accepts text input, PDFs, or both. <br>
+    * Extracts text from text input, PDFs, or both. <br>
+    * Divides extracted text into smaller chunks. <br>
+
+2. Embedding Generation <br>
+    * Computes embeddings for each text chunk (capturing meaning). <br>
+
+3. Role of FAISS <br>
+    * FAISS (Facebook AI Similarity Search) library is used forfor similatiry search. The text chunks most similar to the user's question are found using similarity             search. They are called matches in the code. <br>
+    * FAISS.from_texts is used to create a FAISS index (vector_store) from these text chunks and their corresponding embeddings. <br>
+      
+4. Question Answering with GPT-3.5-turbo <br>
+    * Leverages load_qa_chain function from Langchain with GPT-3.5-turbo as the llm . <br>
+    * Uses the "stuff" document chain_type for simplicity. <br>
+    * The chain.run combines (or "stuffs")  user question and retrieved matches (similar chunks) into a prompt and a response is generated. <br>
   
-FAISS (Facebook AI Similarity Search) is a library developed by Facebook AI Research that is designed for efficient similarity search and clustering of dense vectors. It is particularly useful in applications involving large datasets of high-dimensional vectors, such as those generated in machine learning and natural language processing tasks.
-
-When a user asks a question, the application uses FAISS to find text chunks that are most similar to the query. This is done through the similarity_search method.
-
-The llm here is gpt-3.5-turbo.
-
-A load_qa_chain(from langchain) is then created using the llm, and chain_type = stuff. The stuff documents chain ("stuff" as in "to stuff" or "to fill") is the most straightforward of the document chains. It takes a list of documents, inserts them all into a prompt and passes that prompt to an LLM.
-This chain is well-suited for Q&A on documents that are small and only a few are passed in for most calls.
-
-The chain.run takes the matches from similarity search and user question as inputs and generates the response.
