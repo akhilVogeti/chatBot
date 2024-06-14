@@ -1,6 +1,6 @@
 # AI-powered Q&A 
 
-A python application that uses ChatGPT and langchain to respond to your questions/prompts on an uploaded pdf or text input.
+A python application that uses ChatGPT and langchain to respond to your questions/prompts on an uploaded pdf or text input or both.
 
 ## Requirements
 1. OpenAI API Key (paid)
